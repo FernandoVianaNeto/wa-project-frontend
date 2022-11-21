@@ -1,15 +1,15 @@
 import React from 'react';
+import { Aside, Container } from './styles';
 
 export function Home() {
   return (
-    <div className='container'>
-      <aside>
+    <Container>
+      <Aside>
         <h1 className='logo'>Wa-Project</h1>
         <p>Menu</p>
-      </aside>
+      </Aside>
       <section>
-
       </section>
-    </div>
+    </Container>
   );
 }
