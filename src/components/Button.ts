@@ -5,5 +5,9 @@ export const Button = styled.button`
     display: flex;
     width: 100vw;
     height: 100vh;
+
+    &:active {
+      background-color: ${theme.colors.fourthColor};
+    }
   `}
 `;
