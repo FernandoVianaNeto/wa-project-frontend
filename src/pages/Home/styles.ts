@@ -5,21 +5,22 @@ export const Container = styled.div`
     display: flex;
     margin: 0;
     padding: 0;
-    height: 100vh;
-
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow-y: auto;
   `}
 `;
 
 export const Aside = styled.aside`
   ${({ theme }: any) => css`
     display: flex;
+    position: fixed;
     flex-direction: column;
     border-color: 10px solid gray;
     background-color: blue;
     height: 100vh;
-    flex: 1;
     padding: 30px;
-    z-index: 100;
+    width: 200px;
   `}
 `;
 
@@ -27,27 +28,49 @@ export const Section = styled.section`
   ${({ theme }: any) => css`
     display: flex;
     flex-direction: column;
-    flex: 6;
+    width: 100%;
+    height: 100vh;
+    margin-left: 260px;
   `}
 `;
 
 export const Header = styled.header`
   ${({ theme }: any) => css`
     display: flex;
+    align-items: center;
+    justify-content: space-around;
     flex-direction: row;
-    /* justify-content: space-between; */
-    max-width: 100%;
-    padding: 30px;
+    width: 100%;
+    margin: 30px;
 
     .input-container {
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-between;
-      width: 30px;
-      border: 2px solid lightgray;
-      border-radius: 5px;
+      justify-content: space-around;
+      border: 1px solid lightgray;
+      border-radius: 10px;
+      padding: 2.5px;
+      margin-right: 10px;
     }
+
+    form {
+      display: flex;
+
+      button {
+        background-color: transparent;
+        color: black;
+        border: 0;
+        cursor: pointer;
+      }
+
+      div {
+        .icon {
+          margin: 0px 5px 0px 5px;
+        }
+      }
+    }
+
 
     input {
       border-radius: 10px;
